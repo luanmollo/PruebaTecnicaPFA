@@ -1,0 +1,31 @@
+c:\users\sebastian\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\Prueba.MenuInicio.resources
+c:\users\sebastian\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\Prueba.Properties.Resources.resources
+c:\users\sebastian\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\Test.csproj.GenerateResource.Cache
+c:\users\sebastian\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Local.sdf
+c:\users\sebastian\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Prueba.exe.config
+c:\users\sebastian\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Prueba.exe
+c:\users\sebastian\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Prueba.pdb
+c:\users\sebastian\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\Prueba.exe
+c:\users\sebastian\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\Prueba.pdb
+c:\Users\Sebastian\Documents\Visual Studio 2010\Projects\CSPFA_TEST\CSPFA_TEST\bin\Debug\Prueba.exe.config
+c:\Users\Sebastian\Documents\Visual Studio 2010\Projects\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Prueba.exe
+c:\Users\Sebastian\Documents\Visual Studio 2010\Projects\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Prueba.pdb
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\bin\Debug\Local.sdf
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\bin\Debug\Prueba.exe.config
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\bin\Debug\Prueba.exe
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\bin\Debug\Prueba.pdb
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Test.csproj.AssemblyReference.cache
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Test.csproj.SuggestedBindingRedirects.cache
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Prueba.MenuInicio.resources
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Prueba.Properties.Resources.resources
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Test.csproj.GenerateResource.cache
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Prueba.exe
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Prueba.pdb
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\bin\Debug\Datos.dll
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\bin\Debug\Modelo.dll
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\bin\Debug\Datos.pdb
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\bin\Debug\Modelo.pdb
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Test.csproj.CopyComplete
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Prueba.frmAdmSocios.resources
+C:\Users\emollo\Desktop\CSPFA_TEST\CSPFA_TEST\obj\x86\Debug\Prueba.frmAltaSocio.resources

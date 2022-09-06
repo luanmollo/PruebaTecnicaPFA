@@ -1,0 +1,9 @@
+C:\Users\emollo\Desktop\CSPFA_TEST\Datos\bin\Debug\Datos.dll
+C:\Users\emollo\Desktop\CSPFA_TEST\Datos\bin\Debug\Datos.pdb
+C:\Users\emollo\Desktop\CSPFA_TEST\Datos\bin\Debug\Modelo.dll
+C:\Users\emollo\Desktop\CSPFA_TEST\Datos\bin\Debug\Modelo.pdb
+C:\Users\emollo\Desktop\CSPFA_TEST\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\emollo\Desktop\CSPFA_TEST\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\emollo\Desktop\CSPFA_TEST\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\emollo\Desktop\CSPFA_TEST\Datos\obj\Debug\Datos.dll
+C:\Users\emollo\Desktop\CSPFA_TEST\Datos\obj\Debug\Datos.pdb

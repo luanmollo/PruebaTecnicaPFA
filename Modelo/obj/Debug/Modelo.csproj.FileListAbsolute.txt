@@ -1,0 +1,6 @@
+C:\Users\emollo\Desktop\CSPFA_TEST\Modelo\bin\Debug\Modelo.dll
+C:\Users\emollo\Desktop\CSPFA_TEST\Modelo\bin\Debug\Modelo.pdb
+C:\Users\emollo\Desktop\CSPFA_TEST\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\emollo\Desktop\CSPFA_TEST\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\emollo\Desktop\CSPFA_TEST\Modelo\obj\Debug\Modelo.dll
+C:\Users\emollo\Desktop\CSPFA_TEST\Modelo\obj\Debug\Modelo.pdb
