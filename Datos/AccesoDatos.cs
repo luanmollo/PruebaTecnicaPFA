@@ -18,7 +18,7 @@ namespace Datos
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("");
+            conexion = new SqlConnection("server=CYS160PC\\SQLEXPRESS; database=SOCIOS_DB; integrated security=true");
             comando = new SqlCommand();
 
         }

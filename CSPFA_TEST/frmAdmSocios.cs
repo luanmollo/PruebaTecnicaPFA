@@ -43,7 +43,7 @@ namespace Prueba
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-                throw;
+                
             }
         }
 
@@ -60,6 +60,7 @@ namespace Prueba
 
             Socio seleccionado;
             seleccionado = (Socio)dgvSocios.CurrentRow.DataBoundItem;
+            
 
             frmAltaSocio modificar = new frmAltaSocio(seleccionado);
             modificar.ShowDialog();

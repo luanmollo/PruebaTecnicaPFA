@@ -88,6 +88,7 @@
             // 
             // cboTipoSocio
             // 
+            this.cboTipoSocio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoSocio.FormattingEnabled = true;
             this.cboTipoSocio.Location = new System.Drawing.Point(15, 59);
             this.cboTipoSocio.Name = "cboTipoSocio";
@@ -96,6 +97,7 @@
             // 
             // cboTipoDocumento
             // 
+            this.cboTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoDocumento.FormattingEnabled = true;
             this.cboTipoDocumento.Location = new System.Drawing.Point(173, 59);
             this.cboTipoDocumento.Name = "cboTipoDocumento";
@@ -200,6 +202,7 @@
             this.Controls.Add(this.gbSocio);
             this.Controls.Add(this.dgvSocios);
             this.Name = "frmAdmSocios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administración de Socios";
             this.Load += new System.EventHandler(this.frmAdmSocios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).EndInit();

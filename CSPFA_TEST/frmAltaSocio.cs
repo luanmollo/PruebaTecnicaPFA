@@ -37,7 +37,13 @@ namespace Prueba
                 cboTipoDocumento.DataSource = tipoDocumentoNegocio.Listar();
                 cboTipoSocio.DataSource = tipoSocioNegocio.Listar();
 
-                if(socio != null)
+                cboTipoDocumento.ValueMember = "Id";
+                cboTipoDocumento.DisplayMember = "Nombre";
+
+                cboTipoSocio.ValueMember = "Id";
+                cboTipoSocio.DisplayMember = "Nombre";
+
+                if (socio != null)
                 {
                     txtNombre.Text = socio.Nombre;
                     txtApellido.Text = socio.Apellido;
@@ -45,6 +51,9 @@ namespace Prueba
                     cboTipoDocumento.SelectedValue = socio.TipoDocumento.Id;
                     txtDocumento.Text = socio.Documento;
                     cboTipoSocio.SelectedValue = socio.TipoSocio.Id;
+                    txtMail.Text = socio.Contacto.Mail;
+                    txtTelefono.Text = socio.Contacto.Telefono;
+                    
                 }
             }
             catch (Exception ex)
@@ -64,7 +73,10 @@ namespace Prueba
                 //validar alta
 
                 if (socio == null)
+                {
                     socio = new Socio();
+                    socio.Contacto = new SocioContacto();
+                }
 
                 socio.Nombre = txtNombre.Text;
                 socio.Apellido = txtApellido.Text;
@@ -72,6 +84,8 @@ namespace Prueba
                 socio.TipoDocumento = (TipoDocumento)cboTipoDocumento.SelectedItem;
                 socio.Documento = txtDocumento.Text;
                 socio.TipoSocio = (TipoSocio)cboTipoSocio.SelectedItem;
+                socio.Contacto.Mail = txtMail.Text;
+                socio.Contacto.Telefono = txtTelefono.Text;
 
                 if(socio.Id != 0)
                 {

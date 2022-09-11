@@ -16,7 +16,7 @@ namespace Datos
 
             try
             {
-                datos.ConfigurarConsulta("select Id, Nombre from tbl_TipoSocio");
+                datos.ConfigurarConsulta("select Id, Nombre from tbl_Tipo_Socio");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read())
