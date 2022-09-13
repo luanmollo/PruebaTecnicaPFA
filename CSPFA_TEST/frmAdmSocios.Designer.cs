@@ -35,7 +35,7 @@
             this.cboTipoSocio = new System.Windows.Forms.ComboBox();
             this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
             this.lblTipoSocio = new System.Windows.Forms.Label();
             this.lblTipoDocumento = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -43,6 +43,7 @@
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.gbSocio = new System.Windows.Forms.GroupBox();
             this.gbFiltro = new System.Windows.Forms.GroupBox();
+            this.linklblLimpiarFiltros = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).BeginInit();
             this.gbSocio.SuspendLayout();
             this.gbFiltro.SuspendLayout();
@@ -111,12 +112,12 @@
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 6;
             // 
-            // txtApellido
+            // txtDocumento
             // 
-            this.txtApellido.Location = new System.Drawing.Point(468, 59);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtApellido.TabIndex = 7;
+            this.txtDocumento.Location = new System.Drawing.Point(468, 59);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(100, 20);
+            this.txtDocumento.TabIndex = 7;
             // 
             // lblTipoSocio
             // 
@@ -178,7 +179,8 @@
             // 
             // gbFiltro
             // 
-            this.gbFiltro.Controls.Add(this.txtApellido);
+            this.gbFiltro.Controls.Add(this.linklblLimpiarFiltros);
+            this.gbFiltro.Controls.Add(this.txtDocumento);
             this.gbFiltro.Controls.Add(this.cboTipoSocio);
             this.gbFiltro.Controls.Add(this.btnFiltrar);
             this.gbFiltro.Controls.Add(this.cboTipoDocumento);
@@ -193,6 +195,17 @@
             this.gbFiltro.TabIndex = 14;
             this.gbFiltro.TabStop = false;
             this.gbFiltro.Text = "Filtros";
+            // 
+            // linklblLimpiarFiltros
+            // 
+            this.linklblLimpiarFiltros.AutoSize = true;
+            this.linklblLimpiarFiltros.Location = new System.Drawing.Point(633, 0);
+            this.linklblLimpiarFiltros.Name = "linklblLimpiarFiltros";
+            this.linklblLimpiarFiltros.Size = new System.Drawing.Size(67, 13);
+            this.linklblLimpiarFiltros.TabIndex = 13;
+            this.linklblLimpiarFiltros.TabStop = true;
+            this.linklblLimpiarFiltros.Text = "Limpiar filtros";
+            this.linklblLimpiarFiltros.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblLimpiarFiltros_LinkClicked);
             // 
             // frmAdmSocios
             // 
@@ -223,7 +236,7 @@
         private System.Windows.Forms.ComboBox cboTipoSocio;
         private System.Windows.Forms.ComboBox cboTipoDocumento;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtDocumento;
         private System.Windows.Forms.Label lblTipoSocio;
         private System.Windows.Forms.Label lblTipoDocumento;
         private System.Windows.Forms.Label lblNombre;
@@ -231,5 +244,6 @@
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.GroupBox gbSocio;
         private System.Windows.Forms.GroupBox gbFiltro;
+        private System.Windows.Forms.LinkLabel linklblLimpiarFiltros;
     }
 }

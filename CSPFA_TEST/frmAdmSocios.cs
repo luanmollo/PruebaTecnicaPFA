@@ -25,8 +25,12 @@ namespace Prueba
             CargarGrilla();
             TipoSocioNegocio tipoSocioNegocio = new TipoSocioNegocio();
             TipoDocumentoNegocio tipoDocumentoNegocio = new TipoDocumentoNegocio();
+
             cboTipoSocio.DataSource = tipoSocioNegocio.Listar();
+            cboTipoSocio.SelectedIndex = -1;
+
             cboTipoDocumento.DataSource = tipoDocumentoNegocio.Listar();
+            cboTipoDocumento.SelectedIndex = -1;
         }
 
         private void CargarGrilla()
@@ -88,31 +92,48 @@ namespace Prueba
             }
         }
 
-        private bool validarFiltro()
-        {
-            if(cboTipoSocio.SelectedIndex < 0)
-            {
-                MessageBox.Show("Debes seleccionar un tipo de socio");
-                return true;
-            }
-
-            if(cboTipoDocumento.SelectedIndex < 0)
-            {
-                MessageBox.Show("Debes seleccionar un tipo de documento");
-                return true;
-            }
-
-            return false;
-        }
-
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            if (validarFiltro())
-                return;
+            SocioNegocio negocio = new SocioNegocio();
+
+            try
+            {
+                string tipoSocio;
+                string tipoDocumento;
+
+                if (cboTipoSocio.SelectedIndex != -1)
+                    tipoSocio = cboTipoSocio.SelectedItem.ToString();
+                else
+                    tipoSocio = "";
+
+                if (cboTipoDocumento.SelectedIndex != -1)
+                    tipoDocumento = cboTipoDocumento.SelectedItem.ToString();
+                else
+                    tipoDocumento = "";
 
 
+                string nombre = txtNombre.Text;
+                string documento = txtDocumento.Text;
 
+                dgvSocios.DataSource = negocio.Filtrar(tipoDocumento, tipoSocio, documento, nombre);
 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void linklblLimpiarFiltros_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            cboTipoDocumento.SelectedIndex = -1;
+            cboTipoSocio.SelectedIndex = -1;
+            txtNombre.Text = "";
+            txtDocumento.Text = "";
+
+            CargarGrilla();
         }
     }
 }

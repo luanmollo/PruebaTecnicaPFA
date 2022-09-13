@@ -149,23 +149,85 @@ namespace Datos
             }
         }
 
-        //public List<Socio> Filtrar(string tipoDocumento, string tipoSocio, string documento, string nombre)
-        //{
-        //    List<Socio> lista = new List<Socio>();
-        //    AccesoDatos datos = new AccesoDatos();
+        public List<Socio> Filtrar(string tipoDocumento, string tipoSocio, string documento, string nombre)
+        {
+            List<Socio> lista = new List<Socio>();
+            AccesoDatos datos = new AccesoDatos();
 
-        //    try
-        //    {
-        //        string consulta = ""; //añadir la consulta base
+            try
+            {
+                string consulta = "select s.Id, s.Nombre, Apellido, Direccion, TipoDocId, td.Nombre TipoDocumento, Documento, TipoSocioId, ts.Nombre TipoSocio, FechaAlta, ContactoId, sc.Mail Mail, sc.Telefonos Telefonos from tbl_Socio s, tbl_Socio_Contacto sc, tbl_Tipo_Documento td, tbl_Tipo_Socio ts where s.TipoDocId = td.Id and s.TipoSocioId = ts.Id and s.ContactoId = sc.Id";
 
-                
-        //    }
-        //    catch (Exception ex)
-        //    {
+                switch (tipoDocumento)
+                {
+                    case "Dni":
+                        consulta += " and td.Nombre like 'Dni'";
+                        break;
+                    case "Libreta de enrolamiento":
+                        consulta += " and td.Nombre like 'Libreta de Enrolamiento'";
+                        break;
+                }
 
-        //        throw ex;
-        //    }
-        //}
-        
+                switch (tipoSocio)
+                {
+                    case "Vitalicio":
+                        consulta += " and ts.Nombre like 'Vitalicio'";
+                        break;
+                    case "Regular":
+                        consulta += " and ts.Nombre like 'Regular'";
+                        break;
+                    case "No Socio":
+                        consulta += " and ts.Nombre like 'No Socio'";
+                        break;
+                }
+
+                consulta += " and Documento like '%" + documento + "%'" + " and s.Nombre like '%" + nombre + "%'";
+
+
+                datos.ConfigurarConsulta(consulta);
+                datos.EjecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Socio aux = new Socio();
+
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Apellido = (string)datos.Lector["Apellido"];
+                    aux.Direccion = (string)datos.Lector["Direccion"];
+
+                    aux.TipoDocumento = new TipoDocumento();
+                    aux.TipoDocumento.Id = (int)datos.Lector["TipoDocId"];
+                    aux.TipoDocumento.Nombre = (string)datos.Lector["TipoDocumento"];
+
+                    aux.Documento = (string)datos.Lector["Documento"];
+
+                    aux.TipoSocio = new TipoSocio();
+                    aux.TipoSocio.Id = (int)datos.Lector["TipoSocioId"];
+                    aux.TipoSocio.Nombre = (string)datos.Lector["TipoSocio"];
+
+                    aux.FechaAlta = (DateTime)datos.Lector["FechaAlta"];
+
+                    aux.Contacto = new SocioContacto();
+                    aux.Contacto.Id = (int)datos.Lector["ContactoId"];
+                    aux.Contacto.Mail = (string)datos.Lector["Mail"];
+                    aux.Contacto.Telefono = (string)datos.Lector["Telefonos"];
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
     }
 }
