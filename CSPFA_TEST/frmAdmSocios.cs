@@ -73,6 +73,7 @@ namespace Prueba
 
             Socio seleccionado;
             SocioNegocio socioNegocio = new SocioNegocio();
+            SocioContactoNegocio contactoNegocio = new SocioContactoNegocio();
 
             DialogResult respuesta = MessageBox.Show("¿Estás seguro de eliminar?", "¿Eliminar?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -80,6 +81,7 @@ namespace Prueba
             {
                 seleccionado = (Socio)dgvSocios.CurrentRow.DataBoundItem;
                 socioNegocio.Eliminar(seleccionado.Id);
+                contactoNegocio.Eliminar(seleccionado.Contacto.Id);
                 CargarGrilla();
             }
         }

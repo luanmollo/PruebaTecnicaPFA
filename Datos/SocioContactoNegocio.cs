@@ -60,5 +60,27 @@ namespace Datos
             }
 
         }
+
+        public void Eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.ConfigurarConsulta("delete from tbl_Socio_Contacto where id = @Id");
+                datos.ConfigurarParametros("@Id", id);
+
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
     }
 }

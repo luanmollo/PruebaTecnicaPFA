@@ -97,9 +97,8 @@ namespace Prueba
                 }
                 else
                 {
-                    int idSocioContacto = contactoNegocio.Agregar(socio.Contacto);
                     socio.FechaAlta = DateTime.Now;
-                    socio.Contacto.Id = idSocioContacto;
+                    socio.Contacto.Id = contactoNegocio.Agregar(socio.Contacto);
                     socioNegocio.Agregar(socio);
                     MessageBox.Show("Agregado exitosamente");
                 }
