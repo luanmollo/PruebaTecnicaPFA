@@ -71,7 +71,8 @@ namespace Prueba
 
             try
             {
-                //validar alta
+                if (ValidarAltaSocio())
+                    return;
 
                 if (socio == null)
                 {
@@ -117,6 +118,23 @@ namespace Prueba
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private bool ValidarAltaSocio()
+        {
+            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text) || string.IsNullOrEmpty(txtDireccion.Text) || string.IsNullOrEmpty(txtDocumento.Text) || string.IsNullOrEmpty(txtMail.Text) || string.IsNullOrEmpty(txtTelefono.Text))
+            {
+                MessageBox.Show("Debes completar todos los campos");
+                return true;
+            }
+
+            if (!(Validaciones.ValidarSoloNumeros(txtTelefono.Text)))
+            {
+                MessageBox.Show("Debes ingresar sólo números en el campo 'Teléfono'");
+                return true;
+            }
+
+            return false;
         }
     }
 }

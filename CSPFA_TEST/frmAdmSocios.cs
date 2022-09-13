@@ -56,7 +56,8 @@ namespace Prueba
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //validar selección
+            if (Validaciones.validarSeleccionFila(dgvSocios))
+                return;
 
             Socio seleccionado;
             seleccionado = (Socio)dgvSocios.CurrentRow.DataBoundItem;
@@ -69,7 +70,8 @@ namespace Prueba
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //validar selección
+            if (Validaciones.validarSeleccionFila(dgvSocios))
+                return;
 
             Socio seleccionado;
             SocioNegocio socioNegocio = new SocioNegocio();
@@ -84,6 +86,33 @@ namespace Prueba
                 contactoNegocio.Eliminar(seleccionado.Contacto.Id);
                 CargarGrilla();
             }
+        }
+
+        private bool validarFiltro()
+        {
+            if(cboTipoSocio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debes seleccionar un tipo de socio");
+                return true;
+            }
+
+            if(cboTipoDocumento.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debes seleccionar un tipo de documento");
+                return true;
+            }
+
+            return false;
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            if (validarFiltro())
+                return;
+
+
+
+
         }
     }
 }

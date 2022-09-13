@@ -162,6 +162,7 @@
             this.btnFiltrar.TabIndex = 12;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // gbSocio
             // 
