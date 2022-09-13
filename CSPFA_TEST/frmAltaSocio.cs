@@ -67,6 +67,7 @@ namespace Prueba
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             SocioNegocio socioNegocio = new SocioNegocio();
+            SocioContactoNegocio contactoNegocio = new SocioContactoNegocio();
 
             try
             {
@@ -84,17 +85,21 @@ namespace Prueba
                 socio.TipoDocumento = (TipoDocumento)cboTipoDocumento.SelectedItem;
                 socio.Documento = txtDocumento.Text;
                 socio.TipoSocio = (TipoSocio)cboTipoSocio.SelectedItem;
+
                 socio.Contacto.Mail = txtMail.Text;
                 socio.Contacto.Telefono = txtTelefono.Text;
 
-                if(socio.Id != 0)
+                if (socio.Id != 0)
                 {
+                    contactoNegocio.Modificar(socio.Contacto);
                     socioNegocio.Modificar(socio);
                     MessageBox.Show("Modificado exitosamente");
                 }
                 else
                 {
+                    int idSocioContacto = contactoNegocio.Agregar(socio.Contacto);
                     socio.FechaAlta = DateTime.Now;
+                    socio.Contacto.Id = idSocioContacto;
                     socioNegocio.Agregar(socio);
                     MessageBox.Show("Agregado exitosamente");
                 }

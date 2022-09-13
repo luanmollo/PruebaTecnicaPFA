@@ -19,7 +19,7 @@ namespace Datos
 
             try
             {
-                datos.ConfigurarConsulta("select s.Id, s.Nombre, Apellido, Direccion, TipoDocId, td.Nombre TipoDocumento, Documento, TipoSocioId, ts.Nombre TipoSocio, FechaAlta, ContactoId, sc.Mail Mail, sc.Telefonos Telefonos from tbl_socio s, tbl_Tipo_Documento td, tbl_Tipo_Socio ts, tbl_Socio_Contacto sc where s.TipoDocId = td.Id and s.TipoSocioId = ts.Id and s.ContactoId = sc.Id");
+                datos.ConfigurarConsulta("select s.Id, s.Nombre, Apellido, Direccion, TipoDocId, td.Nombre TipoDocumento, Documento, TipoSocioId, ts.Nombre TipoSocio, FechaAlta, ContactoId, sc.Mail Mail, sc.Telefonos Telefonos from tbl_Socio s, tbl_Socio_Contacto sc, tbl_Tipo_Documento td, tbl_Tipo_Socio ts where s.TipoDocId = td.Id and s.TipoSocioId = ts.Id and s.ContactoId = sc.Id");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read())
@@ -44,6 +44,7 @@ namespace Datos
                     aux.FechaAlta = (DateTime)datos.Lector["FechaAlta"];
 
                     aux.Contacto = new SocioContacto();
+                    aux.Contacto.Id = (int)datos.Lector["ContactoId"];
                     aux.Contacto.Mail = (string)datos.Lector["Mail"];
                     aux.Contacto.Telefono = (string)datos.Lector["Telefonos"];
 
@@ -70,7 +71,8 @@ namespace Datos
 
             try
             {
-                datos.ConfigurarConsulta("insert into tbl_Socio(Nombre, Apellido, Direccion, TipoDocId, Documento, TipoSocioId, FechaAlta) values (@Nombre, @Apellido, @Direccion, @TipoDocId, @Documento, @TipoSocioId, @FechaAlta)");
+
+                datos.ConfigurarConsulta("insert into tbl_Socio(Nombre, Apellido, Direccion, TipoDocId, Documento, TipoSocioId, FechaAlta, ContactoId) values (@Nombre, @Apellido, @Direccion, @TipoDocId, @Documento, @TipoSocioId, @FechaAlta, @ContactoId)");
                 datos.ConfigurarParametros("@Nombre", nuevo.Nombre);
                 datos.ConfigurarParametros("@Apellido", nuevo.Apellido);
                 datos.ConfigurarParametros("@Direccion", nuevo.Direccion);
@@ -78,6 +80,7 @@ namespace Datos
                 datos.ConfigurarParametros("@Documento", nuevo.Documento);
                 datos.ConfigurarParametros("@TipoSocioId", nuevo.TipoSocio.Id);
                 datos.ConfigurarParametros("@FechaAlta", nuevo.FechaAlta);
+                datos.ConfigurarParametros("@ContactoId", nuevo.Contacto.Id);
 
                 datos.EjecutarAccion();
                 

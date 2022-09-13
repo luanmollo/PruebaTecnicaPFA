@@ -46,14 +46,16 @@ namespace Datos
 
         }
 
-        public void EjecutarAccion()
+        public int EjecutarAccion()
         {
             comando.Connection = conexion;
 
             try
             {
                 conexion.Open();
-                comando.ExecuteNonQuery();
+                //comando.ExecuteNonQuery();
+
+                return Convert.ToInt32(comando.ExecuteScalar()); //devuelve el id del nuevo registro
             }
             catch (Exception ex)
             {
