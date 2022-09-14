@@ -21,6 +21,7 @@ namespace Modelo
         [DisplayName("Fecha de Alta")]
         public DateTime FechaAlta { get; set; }
         public SocioContacto Contacto { get; set; }
+        
 
 
     }

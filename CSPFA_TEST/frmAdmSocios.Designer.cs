@@ -51,9 +51,12 @@
             // 
             // dgvSocios
             // 
+            this.dgvSocios.AllowUserToResizeColumns = false;
+            this.dgvSocios.AllowUserToResizeRows = false;
             this.dgvSocios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSocios.Location = new System.Drawing.Point(50, 138);
             this.dgvSocios.Name = "dgvSocios";
+            this.dgvSocios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSocios.Size = new System.Drawing.Size(715, 244);
             this.dgvSocios.TabIndex = 0;
             // 

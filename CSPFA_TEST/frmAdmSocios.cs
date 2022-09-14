@@ -41,7 +41,12 @@ namespace Prueba
             {
                 listaSocios = negocio.Listar();
                 dgvSocios.DataSource = listaSocios;
-                //dgvSocios.Colums["Id"].Visible = false;
+                dgvSocios.Columns["Id"].Visible = false;
+                dgvSocios.Columns["Contacto"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                dgvSocios.AutoResizeRows();
+                dgvSocios.RowHeadersVisible = false;
+
+                
 
             }
             catch (Exception ex)

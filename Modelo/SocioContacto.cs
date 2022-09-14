@@ -13,5 +13,10 @@ namespace Modelo
         public string Mail { get; set; }
         public string Telefono { get; set; }
 
+        public override string ToString()
+        {
+            return "Mail: " + Mail + Environment.NewLine + "Teléfono: " + Telefono;
+        }
+
     }
 }
