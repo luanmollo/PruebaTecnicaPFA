@@ -44,6 +44,7 @@
             this.gbSocio = new System.Windows.Forms.GroupBox();
             this.gbFiltro = new System.Windows.Forms.GroupBox();
             this.linklblLimpiarFiltros = new System.Windows.Forms.LinkLabel();
+            this.btnIngresarPago = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).BeginInit();
             this.gbSocio.SuspendLayout();
             this.gbFiltro.SuspendLayout();
@@ -210,11 +211,22 @@
             this.linklblLimpiarFiltros.Text = "Limpiar filtros";
             this.linklblLimpiarFiltros.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblLimpiarFiltros_LinkClicked);
             // 
+            // btnIngresarPago
+            // 
+            this.btnIngresarPago.Location = new System.Drawing.Point(661, 427);
+            this.btnIngresarPago.Name = "btnIngresarPago";
+            this.btnIngresarPago.Size = new System.Drawing.Size(104, 23);
+            this.btnIngresarPago.TabIndex = 15;
+            this.btnIngresarPago.Text = "Ingresar pago";
+            this.btnIngresarPago.UseVisualStyleBackColor = true;
+            this.btnIngresarPago.Click += new System.EventHandler(this.btnIngresarPago_Click);
+            // 
             // frmAdmSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 477);
+            this.Controls.Add(this.btnIngresarPago);
             this.Controls.Add(this.gbFiltro);
             this.Controls.Add(this.gbSocio);
             this.Controls.Add(this.dgvSocios);
@@ -248,5 +260,6 @@
         private System.Windows.Forms.GroupBox gbSocio;
         private System.Windows.Forms.GroupBox gbFiltro;
         private System.Windows.Forms.LinkLabel linklblLimpiarFiltros;
+        private System.Windows.Forms.Button btnIngresarPago;
     }
 }

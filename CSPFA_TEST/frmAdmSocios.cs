@@ -140,5 +140,15 @@ namespace Prueba
 
             CargarGrilla();
         }
+
+        private void btnIngresarPago_Click(object sender, EventArgs e)
+        {
+            if (Validaciones.validarSeleccionFila(dgvSocios))
+                return;
+
+            Socio seleccionado = (Socio)dgvSocios.CurrentRow.DataBoundItem;
+            frmAltaPago frmAltaPago = new frmAltaPago(seleccionado);
+            frmAltaPago.ShowDialog();
+        }
     }
 }

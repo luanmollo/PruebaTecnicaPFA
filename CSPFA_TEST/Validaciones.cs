@@ -25,10 +25,11 @@ namespace Prueba
             foreach (char c in cadena)
             {
                 if (!(char.IsNumber(c)))
-                    return false;
+                    return true;
+
             }
 
-            return true;
+            return false;
         }
     }
 }

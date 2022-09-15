@@ -48,3 +48,5 @@ C:\Users\emollo\Desktop\PruebaTecnicaPFA\CSPFA_TEST\obj\x86\Debug\Test.csproj.Co
 C:\Users\emollo\Desktop\PruebaTecnicaPFA\CSPFA_TEST\obj\x86\Debug\Test.csproj.CopyComplete
 C:\Users\emollo\Desktop\PruebaTecnicaPFA\CSPFA_TEST\obj\x86\Debug\Prueba.exe
 C:\Users\emollo\Desktop\PruebaTecnicaPFA\CSPFA_TEST\obj\x86\Debug\Prueba.pdb
+C:\Users\emollo\Desktop\PruebaTecnicaPFA\CSPFA_TEST\obj\x86\Debug\Prueba.frmPagosSocios.resources
+C:\Users\emollo\Desktop\PruebaTecnicaPFA\CSPFA_TEST\obj\x86\Debug\Prueba.frmAltaPago.resources

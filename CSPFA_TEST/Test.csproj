@@ -72,11 +72,23 @@
     <Compile Include="frmAdmSocios.Designer.cs">
       <DependentUpon>frmAdmSocios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAltaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltaPago.Designer.cs">
+      <DependentUpon>frmAltaPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAltaSocio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAltaSocio.Designer.cs">
       <DependentUpon>frmAltaSocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagosSocios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagosSocios.Designer.cs">
+      <DependentUpon>frmPagosSocios.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuInicio.cs">
       <SubType>Form</SubType>
@@ -90,8 +102,14 @@
     <EmbeddedResource Include="frmAdmSocios.resx">
       <DependentUpon>frmAdmSocios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAltaPago.resx">
+      <DependentUpon>frmAltaPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAltaSocio.resx">
       <DependentUpon>frmAltaSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagosSocios.resx">
+      <DependentUpon>frmPagosSocios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuInicio.resx">
       <DependentUpon>MenuInicio.cs</DependentUpon>

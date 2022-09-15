@@ -35,11 +35,10 @@ namespace Prueba
             try
             {
                 cboTipoDocumento.DataSource = tipoDocumentoNegocio.Listar();
-                cboTipoSocio.DataSource = tipoSocioNegocio.Listar();
-
                 cboTipoDocumento.ValueMember = "Id";
                 cboTipoDocumento.DisplayMember = "Nombre";
 
+                cboTipoSocio.DataSource = tipoSocioNegocio.Listar();
                 cboTipoSocio.ValueMember = "Id";
                 cboTipoSocio.DisplayMember = "Nombre";
 

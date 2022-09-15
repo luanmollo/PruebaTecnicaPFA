@@ -15,5 +15,20 @@ namespace Prueba
         {
             InitializeComponent();
         }
+
+        private void btnABMSocios_Click(object sender, EventArgs e)
+        {
+            frmAdmSocios frmAdmSocios = new frmAdmSocios();
+            frmAdmSocios.Show();
+            this.Close();
+
+        }
+
+        private void btnPagosSocios_Click(object sender, EventArgs e)
+        {
+            frmPagosSocios frmPagosSocios = new frmPagosSocios();
+            frmPagosSocios.Show();
+            this.Close();
+        }
     }
 }
