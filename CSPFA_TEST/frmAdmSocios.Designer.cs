@@ -45,6 +45,7 @@
             this.gbFiltro = new System.Windows.Forms.GroupBox();
             this.linklblLimpiarFiltros = new System.Windows.Forms.LinkLabel();
             this.btnIngresarPago = new System.Windows.Forms.Button();
+            this.btnVolverMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).BeginInit();
             this.gbSocio.SuspendLayout();
             this.gbFiltro.SuspendLayout();
@@ -172,14 +173,15 @@
             // gbSocio
             // 
             this.gbSocio.Controls.Add(this.btnModificar);
+            this.gbSocio.Controls.Add(this.btnIngresarPago);
             this.gbSocio.Controls.Add(this.btnAgregar);
             this.gbSocio.Controls.Add(this.btnEliminar);
             this.gbSocio.Location = new System.Drawing.Point(50, 408);
             this.gbSocio.Name = "gbSocio";
-            this.gbSocio.Size = new System.Drawing.Size(386, 57);
+            this.gbSocio.Size = new System.Drawing.Size(516, 57);
             this.gbSocio.TabIndex = 13;
             this.gbSocio.TabStop = false;
-            this.gbSocio.Text = "ABM Socios";
+            this.gbSocio.Text = "Socios";
             // 
             // gbFiltro
             // 
@@ -213,7 +215,7 @@
             // 
             // btnIngresarPago
             // 
-            this.btnIngresarPago.Location = new System.Drawing.Point(661, 427);
+            this.btnIngresarPago.Location = new System.Drawing.Point(365, 19);
             this.btnIngresarPago.Name = "btnIngresarPago";
             this.btnIngresarPago.Size = new System.Drawing.Size(104, 23);
             this.btnIngresarPago.TabIndex = 15;
@@ -221,12 +223,22 @@
             this.btnIngresarPago.UseVisualStyleBackColor = true;
             this.btnIngresarPago.Click += new System.EventHandler(this.btnIngresarPago_Click);
             // 
+            // btnVolverMenu
+            // 
+            this.btnVolverMenu.Location = new System.Drawing.Point(661, 427);
+            this.btnVolverMenu.Name = "btnVolverMenu";
+            this.btnVolverMenu.Size = new System.Drawing.Size(104, 23);
+            this.btnVolverMenu.TabIndex = 16;
+            this.btnVolverMenu.Text = "Volver al Menú";
+            this.btnVolverMenu.UseVisualStyleBackColor = true;
+            this.btnVolverMenu.Click += new System.EventHandler(this.btnVolverMenu_Click);
+            // 
             // frmAdmSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 477);
-            this.Controls.Add(this.btnIngresarPago);
+            this.Controls.Add(this.btnVolverMenu);
             this.Controls.Add(this.gbFiltro);
             this.Controls.Add(this.gbSocio);
             this.Controls.Add(this.dgvSocios);
@@ -261,5 +273,6 @@
         private System.Windows.Forms.GroupBox gbFiltro;
         private System.Windows.Forms.LinkLabel linklblLimpiarFiltros;
         private System.Windows.Forms.Button btnIngresarPago;
+        private System.Windows.Forms.Button btnVolverMenu;
     }
 }

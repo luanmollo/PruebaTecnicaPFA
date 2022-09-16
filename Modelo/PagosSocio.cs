@@ -18,9 +18,9 @@ namespace Modelo
         public string TipoSocio { get; set; }
 
         public double Monto { get; set; }
-        [DisplayName("Monto pagado")]
         public double MontoFinal { get; set; }
         public DateTime Fecha { get; set; }
+        [DisplayName("Total pagado")]
         public double MontoTotal { get; set; }
 
     }

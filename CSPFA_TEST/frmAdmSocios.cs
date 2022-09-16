@@ -150,5 +150,13 @@ namespace Prueba
             frmAltaPago frmAltaPago = new frmAltaPago(seleccionado);
             frmAltaPago.ShowDialog();
         }
+
+        private void btnVolverMenu_Click(object sender, EventArgs e)
+        {
+            MenuInicio menuInicio = new MenuInicio();
+            menuInicio.Show();            
+            this.Close();
+
+        }
     }
 }

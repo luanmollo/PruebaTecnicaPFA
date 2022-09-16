@@ -90,6 +90,12 @@
     <Compile Include="frmPagosSocios.Designer.cs">
       <DependentUpon>frmPagosSocios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTotalPagosSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTotalPagosSocio.Designer.cs">
+      <DependentUpon>frmTotalPagosSocio.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPagosSocios.resx">
       <DependentUpon>frmPagosSocios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTotalPagosSocio.resx">
+      <DependentUpon>frmTotalPagosSocio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuInicio.resx">
       <DependentUpon>MenuInicio.cs</DependentUpon>
