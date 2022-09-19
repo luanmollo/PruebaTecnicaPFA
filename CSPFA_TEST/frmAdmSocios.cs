@@ -121,6 +121,7 @@ namespace Prueba
                 string documento = txtDocumento.Text;
 
                 dgvSocios.DataSource = negocio.Filtrar(tipoDocumento, tipoSocio, documento, nombre);
+                dgvSocios.AutoResizeRows();
 
             }
             catch (Exception ex)
