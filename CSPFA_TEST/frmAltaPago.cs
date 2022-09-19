@@ -78,7 +78,7 @@ namespace Prueba
                 return true;
             }
 
-            if (Validaciones.ValidarSoloNumeros(txtMonto.Text))
+            if (!(Validaciones.ValidarSoloNumeros(txtMonto.Text)))
             {
                 MessageBox.Show("Debes ingresar solo números en el campo 'Monto'");
                 return true;

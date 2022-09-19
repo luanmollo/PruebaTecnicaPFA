@@ -83,6 +83,9 @@ namespace Prueba
 
         private void btnVerPagosSocio_Click(object sender, EventArgs e)
         {
+            if (Validaciones.validarSeleccionFila(dgvPagosSocios))
+                return;
+
             PagosSocio seleccionado = (PagosSocio)dgvPagosSocios.CurrentRow.DataBoundItem;
 
             frmTotalPagosSocio frmTotalPagosSocio = new frmTotalPagosSocio(seleccionado.Socio);

@@ -24,12 +24,12 @@ namespace Prueba
         {
             foreach (char c in cadena)
             {
-                if (!(char.IsNumber(c)))
-                    return true;
+                if (!(char.IsNumber(c) || (int)c == 44)) 
+                    return false;
 
             }
 
-            return false;
+            return true;
         }
     }
 }
